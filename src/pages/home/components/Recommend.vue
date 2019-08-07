@@ -2,8 +2,8 @@
   <div class="Recommend">
     <div class="title">猜你喜欢</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key='item.id'>
-        <img class="item-img" :src="item.src">
+      <li class="item border-bottom" v-for="item of list" :key='item.id'>
+        <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
             <p class="item-title">{{item.title}}</p>
             <p class="item-desc">{{item.desc}}</p>
@@ -16,25 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        src: 'http://img1.qunarzz.com/sight/p0/1901/d2/d20386fec7943deba3.img.jpg_200x200_6c120222.jpg',
-        id: '001',
-        title: '厦门科技馆',
-        desc: '厦门科技馆让科学变好玩'
-      }, {
-        src: 'http://img1.qunarzz.com/sight/p0/1901/d2/d20386fec7943deba3.img.jpg_200x200_6c120222.jpg',
-        id: '002',
-        title: '厦门科技馆',
-        desc: '厦门科技馆让科学变好玩'
-      }, {
-        src: 'http://img1.qunarzz.com/sight/p0/1901/d2/d20386fec7943deba3.img.jpg_200x200_6c120222.jpg',
-        id: '003',
-        title: '厦门科技馆',
-        desc: '厦门科技馆让科学变好玩'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

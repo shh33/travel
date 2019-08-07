@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header-left">
-    厦门
+    {{this.city}}
     <span class="iconfont allow-icon">&#xe62d;</span>
     </div>
     <div class="header-input">
@@ -14,7 +14,10 @@
 </template>
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 <style lang="stylus" scoped>

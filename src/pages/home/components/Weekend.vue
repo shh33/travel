@@ -4,11 +4,11 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key='item.id'
       >
         <div class="item-img-wrapper">
-          <img class="item-img" :src="item.src">
+          <img class="item-img" :src="item.imgUrl">
         </div>
         <div class="item-info">
             <p class="item-title">{{item.title}}</p>
@@ -21,25 +21,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        src: 'http://img1.qunarzz.com/sight/source/1711/15/1cdd5ee885686b.jpg_r_640x214_46768064.jpg',
-        id: '001',
-        title: '厦门科技馆',
-        desc: '厦门科技馆让科学变好玩'
-      }, {
-        src: 'http://img1.qunarzz.com/sight/source/1505/b3/671f666cc7845a.jpg_r_640x214_f977f30c.jpg',
-        id: '002',
-        title: '厦门科技馆',
-        desc: '厦门科技馆让科学变好玩'
-      }, {
-        src: 'http://img1.qunarzz.com/sight/source/1511/8f/bf3a40e4afcf29.jpg_r_640x214_90225212.jpg',
-        id: '003',
-        title: '厦门科技馆',
-        desc: '厦门科技馆让科学变好玩'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -52,8 +35,7 @@ export default {
   .item-img-wrapper
     overflow: hidden
     height: 0
-    padding-bottom: 33.4%
-    background: pink
+    padding-bottom: 37.09%
   .item-img
     width: 100%
   .item-info

@@ -1,9 +1,11 @@
 <template>
   <div class="header">
-    <div class="header-left">
-    {{this.city}}
-    <span class="iconfont allow-icon">&#xe62d;</span>
+    <router-link to="/city">
+      <div class="header-left">
+      {{this.city}}
+      <span class="iconfont allow-icon">&#xe62d;</span>
     </div>
+    </router-link>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
     </div>
@@ -24,14 +26,15 @@ export default {
  @import '~styles/varibles.styl';
  .header
    display: flex
-   height: .86rem
-   line-height: .86rem
+   height: $headerHeight
+   line-height: $headerHeight
    background: $bgColor
    color: #fff
    .header-left
      width: 1.24rem
      float: left
      text-align: center
+     color: #fff
      .allow-icon
       font-size: .3rem
    .header-input

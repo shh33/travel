@@ -7,6 +7,7 @@
     <home-weekend :list="weekendList"></home-weekend>
   </div>
 </template>
+
 <script>
 import { mapState } from 'vuex'
 import HomeHeader from './components/Header'
@@ -64,6 +65,7 @@ export default {
   }
 }
 </script>
+
 <style>
 
 </style>

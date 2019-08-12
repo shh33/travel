@@ -2,7 +2,7 @@
   <div class="header">
     <router-link to="/city">
       <div class="header-left">
-      {{this.city}}
+      {{city}}
       <span class="iconfont allow-icon">&#xe62d;</span>
     </div>
     </router-link>
@@ -15,10 +15,11 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city'])
   }
 }
 </script>
@@ -31,7 +32,8 @@ export default {
    background: $bgColor
    color: #fff
    .header-left
-     width: 1.24rem
+     min-width: 1.24rem
+     padding:0 .1rem
      float: left
      text-align: center
      color: #fff

@@ -47,10 +47,10 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  unmounted () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
@@ -71,6 +71,7 @@ export default {
     font-size: .5rem
     text-align: center
   .header-fixed
+    z-index: 3
     position: fixed
     top 0
     left 0
